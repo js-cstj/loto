@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Les probabilités de la loterie</title>
+	<link rel="stylesheet" href="./src/style.css"/>
+	<script type="module">
+		import App from "./src/App.js";
+	</script>
+</head>
+<body>
+	<div id="interface">
+		<header><h1>Les probabilités de la loterie</h1></header>
+		<footer><span>&copy; 2021</span><strong>Les probabilités de la loterie</strong></footer>
+		<div class="body" id="app">
+			<form id="loterie" action="" onclick="return false;">
+				<div>
+					<label for="predefini">Prédéfini</label>
+					<select name="predefini" id="predefini">
+						<option value="">Choix prédéfini...</option>
+						<option value="6/36">Lotto 6/36</option>
+						<option value="6/49">Lotto 6/49</option>
+						<option value="7/49">LottoMax</option>
+					</select>
+				</div>
+				<div>
+					<label for="nbBoulesTotal">Nombre de boules total</label>
+					<input type="number" min="1" max="100" name="nbBoulesTotal" id="nbBoulesTotal">
+				</div>
+				<div>
+					<label for="nbBoulesPigees">Nombre de boules pigées</label>
+					<input type="number" min="1" max="100" name="nbBoulesPigees" id="nbBoulesPigees">
+				</div>
+				<div>
+					<button type="button" name="btnCalculer" id="btnCalculer">Calculer</button>
+				</div>
+			</form>
+			<div id="resultat"></div>
+		</div>
+	</div>
+</body>
+</html>
