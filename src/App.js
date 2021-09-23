@@ -7,7 +7,6 @@ export default class App {
 	 * Méthode principale. Sera appelée après le chargement de la page.
 	 */
 	static main() {
-		console.log(Lotto.formater(123456789));
 		document.getElementById("btnCalculer").addEventListener("click", e => {
 			this.calculer();
 		});
@@ -23,9 +22,9 @@ export default class App {
 		var loterie = document.getElementById("loterie");
 		var nbBoulesTotal = loterie.nbBoulesTotal.valueAsNumber;
 		var nbBoulesPigees = loterie.nbBoulesPigees.valueAsNumber;
-		var probabilites = Lotto.probabilites(nbBoulesTotal, nbBoulesPigees);
+		// Calculer les probabilités
 		var resultat = document.getElementById("resultat");
-		resultat.innerHTML = Lotto.formater(probabilites);
+		// Afficher le résultat formaté
 	}
 	/**
 	 * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
