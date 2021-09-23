@@ -7,7 +7,6 @@ export default class App {
 	 * Méthode principale. Sera appelée après le chargement de la page.
 	 */
 	static main() {
-		console.log(Lotto.formater(123456789));
 		document.getElementById("btnCalculer").addEventListener("click", e => {
 			this.calculer();
 		});
