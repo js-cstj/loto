@@ -1,5 +1,5 @@
-# application-base
-Application de base pour débuter un projet
+# loto
+Exercice/Démo à propos des fonctions
 
 ## Description
 Description à venir
