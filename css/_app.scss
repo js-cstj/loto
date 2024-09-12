@@ -1,0 +1,8 @@
+#app {
+	padding: 1em;
+	display: grid;
+	align-content: start;
+	justify-items: center;
+	background-color: hsl(var(--h), var(--s), 20%);
+	// background-image: url('../img/pattern-loto-quebec.svg');
+}
