@@ -2,41 +2,44 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8"/>
-	<title>Les probabilités de la loterie</title>
-	<link rel="stylesheet" href="./src/style.css"/>
+	<link rel="shortcut icon" href="img/favicon.svg" type="image/svg+xml"/>
+	<link rel="stylesheet" href="./css/style.css"/>
 	<script type="module">
 		import App from "./src/App.js";
+		App.main();
 	</script>
+	<title>Les probabilités de la loterie</title>
 </head>
 <body>
 	<div id="interface">
 		<header><h1>Les probabilités de la loterie</h1></header>
-		<footer><span>&copy; 2021</span><strong>Les probabilités de la loterie</strong></footer>
 		<div class="body" id="app">
-			<form id="loterie" action="" onclick="return false;">
+			<form id="loterie" action="">
 				<div>
 					<label for="predefini">Prédéfini</label>
 					<select name="predefini" id="predefini">
 						<option value="">Choix prédéfini...</option>
 						<option value="6/36">Lotto 6/36</option>
+						<option value="7/42">Sélect 42</option>
 						<option value="6/49">Lotto 6/49</option>
 						<option value="7/49">LottoMax</option>
 					</select>
 				</div>
 				<div>
-					<label for="nbBoulesTotal">Nombre de boules total</label>
-					<input type="number" min="1" max="100" name="nbBoulesTotal" id="nbBoulesTotal">
-				</div>
-				<div>
 					<label for="nbBoulesPigees">Nombre de boules pigées</label>
-					<input type="number" min="1" max="100" name="nbBoulesPigees" id="nbBoulesPigees">
+					<input type="number" value="1" min="1" max="100" name="nbBoulesPigees" id="nbBoulesPigees">
 				</div>
 				<div>
-					<button type="button" name="btnCalculer" id="btnCalculer">Calculer</button>
+					<label for="nbBoulesTotal">Nombre de boules total</label>
+					<input type="number" value="1" min="1" max="100" name="nbBoulesTotal" id="nbBoulesTotal">
+				</div>
+				<div>
+					<button type="submit" name="btnCalculer" id="btnCalculer">Calculer</button>
 				</div>
 			</form>
 			<div id="resultat"></div>
 		</div>
+		<footer><span>&copy; Web 3 - Dynamique</span><strong>Les probabilités de la loterie</strong></footer>
 	</div>
 </body>
 </html>

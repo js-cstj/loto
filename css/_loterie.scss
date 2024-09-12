@@ -1,0 +1,36 @@
+#loterie {
+	align-items: center;
+	background-color: white;
+	border: 5px solid hsl(var(--h), var(--s), var(--l));
+	display: grid;
+	gap: 1em;
+	grid-template-columns: auto 1fr;
+	padding: 1em;
+	> * {
+		display: contents;
+	}
+	button[type="submit"] {
+		grid-column: 1 / -1;
+	}
+	input, select, button {
+		border-radius: .5em;
+		border: 1px solid #999;
+		padding-right: 0.25em;
+		padding: .25em .5em;
+	}
+	input[type="number"] {
+		text-align: right;
+	}
+}
+#resultat {
+	color: #fff;
+	padding: 1rem 2rem;
+	line-height: 1;
+	font-size: 3.5em;
+	text-align: center;
+	margin-top: 1rem;
+	background-color: #FFF3;
+	backdrop-filter: blur(4px);
+	border-radius: .5rem;
+	box-shadow: inset .1rem .1rem .2rem #0008;
+}
