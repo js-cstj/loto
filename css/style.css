@@ -1,0 +1,145 @@
+@import './polices/vintage-rustic.css';
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap");
+:root {
+  --h: 202;
+  --s: 99%;
+  --l: 42%;
+  --d: 20%;
+  --font-family: "Roboto", sans-serif;
+  --font-titre: "Roboto Slab", serif;
+}
+
+html {
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+body {
+  height: 100vh;
+}
+
+h1,
+h3,
+.heading {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+h2,
+h4,
+th,
+legend,
+caption,
+label,
+figcaption,
+.subheading {
+  font-family: var(--font-subheading);
+  font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#interface, .interface {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+#interface > header, #interface > footer, .interface > header, .interface > footer {
+  padding: 0.5em 1em;
+  background-color: hsl(var(--h), var(--s), var(--l));
+  color: hsl(var(--h), var(--s), 100%);
+  display: flex;
+  justify-content: space-between;
+}
+#interface > header, .interface > header {
+  justify-content: center;
+  order: -1000;
+  font-size: 1.5em;
+}
+#interface > nav, .interface > nav {
+  background-color: hsl(var(--h), var(--s), 35%);
+  color: hsl(var(--h), var(--s), 100%);
+}
+#interface > footer, .interface > footer {
+  order: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  display: flex;
+}
+nav ul li a {
+  flex-grow: 1;
+  display: flex;
+  padding: 6px 12px;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+  background: #333;
+  color: #fff;
+}
+
+#app {
+  padding: 1em;
+  display: grid;
+  align-content: start;
+  justify-items: center;
+  background-color: hsl(var(--h), var(--s), 20%);
+}
+
+#loterie {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1em;
+  background-color: #f9f9f9;
+  padding: 1em;
+  align-items: center;
+}
+#loterie > * {
+  display: contents;
+}
+#loterie input, #loterie select {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+#loterie button[type=submit] {
+  padding: 0.5em 1em;
+  background-color: hsl(var(--h), var(--s), var(--d));
+  color: #f9f9f9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  grid-column: 1/-1;
+}
+#loterie button[type=submit]:hover {
+  background-color: hsl(var(--h), var(--s), calc(var(--d) + 10%));
+}
+
+#resultat {
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 3.5em;
+  background-color: rgba(51, 51, 51, 0.4);
+  box-shadow: inset 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.2);
+  color: #f9f9f9;
+  font-weight: bold;
+}
